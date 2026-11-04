@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Services</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f1f5f9;
+    color: #172554;
+}
+
+header {
+    background: #123b70;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #0002;
+}
+
+button {
+    background: #1765b5;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media(max-width:650px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>ABC BANK</h2>
+    <a href="index.html">Home</a>
+</header>
+
+<div class="container">
+    <h1>Insurance Services</h1>
+    <p>Choose your insurance plan.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>❤️ Life Insurance</h2>
+            <p>Financial protection for your family.</p>
+            <button onclick="selectPlan('Life Insurance')">Explore</button>
+        </div>
+
+        <div class="card">
+            <h2>🏥 Health Insurance</h2>
+            <p>Protection against medical expenses.</p>
+            <button onclick="selectPlan('Health Insurance')">Explore</button>
+        </div>
+
+        <div class="card">
+            <h2>🚗 Vehicle Insurance</h2>
+            <p>Coverage for your vehicle.</p>
+            <button onclick="selectPlan('Vehicle Insurance')">Explore</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function selectPlan(plan) {
+    alert("You selected " + plan);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Banking</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f1f5f9;
+}
+
+header {
+    background: #123b70;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.services {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #0002;
+}
+
+button {
+    background: #1765b5;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media(max-width:600px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>ABC BANK</h2>
+    <a href="index.html">Home</a>
+</header>
+
+<div class="container">
+    <h1>Mobile Banking</h1>
+    <p>Banking services at your fingertips.</p>
+
+    <div class="services">
+
+        <div class="card">
+            <h2>💳 Check Balance</h2>
+            <p>View your account balance.</p>
+            <button onclick="action('Check Balance')">Continue</button>
+        </div>
+
+        <div class="card">
+            <h2>💸 Fund Transfer</h2>
+            <p>Transfer money to another account.</p>
+            <button onclick="action('Fund Transfer')">Continue</button>
+        </div>
+
+        <div class="card">
+            <h2>📄 Mini Statement</h2>
+            <p>View recent transactions.</p>
+            <button onclick="action('Mini Statement')">Continue</button>
+        </div>
+
+        <div class="card">
+            <h2>⚡ Bill Payments</h2>
+            <p>Pay your utility bills.</p>
+            <button onclick="action('Bill Payments')">Continue</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function action(service) {
+    alert(service + " selected. Demo operation only.");
+}
+</script>
+
+</body>
+</html>
